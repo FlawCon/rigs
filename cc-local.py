@@ -2,9 +2,14 @@ import json
 import requests
 
 room = "Room 1" # Room Name
-frab = "https://timetable.flawcon.xyz/2019/schedule/export/schedule.json" # Timetable/Schedule URL
+#frab = "https://timetable.flawcon.xyz/2019/schedule/export/schedule.json" # Timetable/Schedule URL
 
-sched = requests.get(frab).json()["schedule"]["conference"]["days"][0]["rooms"]
+# read file
+with open('schedule.json', 'r') as myfile:
+    data=myfile.read()
+
+sched = json.loads(data)["schedule"]["conference"]["days"][0]["rooms"]
+#sched = requests.get(frab).json()["schedule"]["conference"]["days"][0]["rooms"]
 
 z = ""
 
