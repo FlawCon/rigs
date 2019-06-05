@@ -10,7 +10,7 @@ z = ""
 
 for i in sched[room]:
     if i["do_not_record"] == False:
-        print("From-until	" + i["title"])
+        print("From-until\t" + i["title"])
 
         if len(i["persons"]) == 1:
             for y in i["persons"]:
@@ -22,5 +22,5 @@ for i in sched[room]:
         else:
             print("Error")
 
-        print("From-until	- " + z)
+        print("From-until\t- " + z)
         z = ""

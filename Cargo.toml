@@ -1,0 +1,8 @@
+[package]
+name = "cc"
+version = "0.1.0"
+authors = ["Q Misell <q@misell.cymru>"]
+
+[dependencies]
+reqwest = "^0.9.17"
+serde = "^1.0.92"
